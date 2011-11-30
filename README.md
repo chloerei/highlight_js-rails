@@ -2,6 +2,20 @@
 
 Rails pipeline wraper for highlight.js http://softwaremaniacs.org/soft/highlight/en/
 
+## Install
+
+In you Gemfile
+
+```ruby
+gem 'highlight_js-rails'
+
+# or
+
+gem 'highlight_js-rails', :git => 'git://github.com/chloerei/highlight_js-rails.git'
+```
+
+Then `bundle install`
+
 ## Usage
 
 application.js
@@ -12,6 +26,8 @@ application.js
 
 hljs.initHighlightingOnLoad();
 ```
+
+application.css
 
 ```css
 *= require highlight_js/github
