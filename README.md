@@ -1,4 +1,4 @@
-# WMD Editor for rails 3.1
+# Highlight.js for rails 3.1
 
 Rails pipeline wraper for highlight.js http://softwaremaniacs.org/soft/highlight/en/
 
