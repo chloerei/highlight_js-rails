@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Rails pipeline wraper for highlight.js}
   gem.homepage      = "https://github.com/chloerei/highlight_js-rails"
 
-  gem.add_dependency "rails", "~> 3.1.1"
+  gem.add_dependency "rails", ">= 3.1.1"
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   gem.files         = `git ls-files`.split("\n")
