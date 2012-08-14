@@ -1,5 +1,5 @@
 module HighlightJs
   module Rails
-    VERSION = "0.0.2"
+    VERSION = "7.1.0"
   end
 end
