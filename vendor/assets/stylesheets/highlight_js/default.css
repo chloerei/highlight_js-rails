@@ -12,7 +12,9 @@ pre code {
 pre code,
 pre .ruby .subst,
 pre .tag .title,
-pre .lisp .title {
+pre .lisp .title,
+pre .clojure .built_in,
+pre .nginx .title {
   color: black;
 }
 
@@ -26,9 +28,6 @@ pre .rules .value .number,
 pre .preprocessor,
 pre .ruby .symbol,
 pre .ruby .symbol .string,
-pre .ruby .symbol .keyword,
-pre .ruby .symbol .keymethods,
-pre .instancevar,
 pre .aggregate,
 pre .template_tag,
 pre .django .variable,
@@ -41,7 +40,8 @@ pre .apache .tag,
 pre .apache .cbracket,
 pre .tex .command,
 pre .tex .special,
-pre .erlang_repl .function_or_atom {
+pre .erlang_repl .function_or_atom,
+pre .markdown .header {
   color: #800;
 }
 
@@ -49,7 +49,8 @@ pre .comment,
 pre .annotation,
 pre .template_comment,
 pre .diff .header,
-pre .chunk {
+pre .chunk,
+pre .markdown .blockquote {
   color: #888;
 }
 
@@ -60,7 +61,9 @@ pre .literal,
 pre .smalltalk .symbol,
 pre .smalltalk .char,
 pre .go .constant,
-pre .change {
+pre .change,
+pre .markdown .bullet,
+pre .markdown .link_url {
   color: #080;
 }
 
@@ -83,15 +86,11 @@ pre .apache .sqbracket,
 pre .nginx .built_in,
 pre .tex .formula,
 pre .erlang_repl .reserved,
-pre .input_number {
+pre .input_number,
+pre .markdown .link_label,
+pre .vhdl .attribute,
+pre .clojure .attribute {
   color: #88F
-}
-
-pre .css .tag,
-pre .javadoctag,
-pre .phpdoc,
-pre .yardoctag {
-  font-weight: bold;
 }
 
 pre .keyword,
@@ -100,19 +99,31 @@ pre .phpdoc,
 pre .title,
 pre .built_in,
 pre .aggregate,
+pre .css .tag,
+pre .javadoctag,
+pre .phpdoc,
+pre .yardoctag,
 pre .smalltalk .class,
 pre .winutils,
 pre .bash .variable,
 pre .apache .tag,
 pre .go .typename,
-pre .tex .command {
+pre .tex .command,
+pre .markdown .strong,
+pre .request,
+pre .status {
   font-weight: bold;
+}
+
+pre .markdown .emphasis {
+  font-style: italic;
 }
 
 pre .nginx .built_in {
   font-weight: normal;
 }
 
+pre .coffeescript .javascript,
 pre .xml .css,
 pre .xml .javascript,
 pre .xml .vbscript,

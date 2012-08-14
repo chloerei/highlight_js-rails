@@ -4,15 +4,10 @@ Requires: xml.js
 Author: Oleg Volchkov <oleg@volchkov.net>
 */
 
-hljs.LANGUAGES.parser3 = function() {
-  var COMMENTED_BLOCK = {
-    begin: '{', end: '}'
-  };
-  COMMENTED_BLOCK.contains = [COMMENTED_BLOCK];
-
+hljs.LANGUAGES['parser3'] = function(hljs) {
   return {
     defaultMode: {
-      subLanguage: 'html',
+      subLanguage: 'xml',
       contains: [
         {
           className: 'comment',
@@ -20,9 +15,14 @@ hljs.LANGUAGES.parser3 = function() {
         },
         {
           className: 'comment',
-          contains: [COMMENTED_BLOCK],
           begin: '\\^rem{', end: '}',
-          relevance: 10
+          relevance: 10,
+          contains: [
+            {
+              begin: '{', end: '}',
+              contains: ['self']
+            }
+          ]
         },
         {
           className: 'preprocessor',
@@ -49,4 +49,4 @@ hljs.LANGUAGES.parser3 = function() {
       ]
     }
   };
-}();
+}(hljs);
