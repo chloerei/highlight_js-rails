@@ -20,9 +20,24 @@ Then `bundle install`
 
 application.js
 
+Select languages you want
+
 ```javascript
 //= require highlight_js/highlight
 //= require highlight_js/languages/ruby
+//= require highlight_js/languages/coffeescript
+//= require highlight_js/languages/javascript
+
+hljs.initHighlightingOnLoad();
+```
+
+or Select all languages
+
+```javascript
+//= require highlight_js/highlight
+//= require highlight_js/languages/ruby
+//= require highlight_js/languages/coffeescript
+//= require highlight_js/languages/javascript
 
 hljs.initHighlightingOnLoad();
 ```
