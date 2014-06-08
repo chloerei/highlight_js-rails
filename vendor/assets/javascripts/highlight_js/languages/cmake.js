@@ -1,15 +1,17 @@
 /*
 Language: CMake
 Description: CMake is an open-source cross-platform system for build automation.
-Author: Igor Kalnitsky <igor.kalnitsky@gmail.com>
-Website: http://kalnitsky.org.ua/
+Author: Igor Kalnitsky <igor@kalnitsky.org>
+Website: http://kalnitsky.org/
 */
 
-hljs.LANGUAGES['cmake'] = function(hljs) {
+function(hljs) {
   return {
+    aliases: ['cmake.in'],
     case_insensitive: true,
-    defaultMode: {
-      keywords: 'add_custom_command add_custom_target add_definitions add_dependencies ' +
+    keywords: {
+      keyword:
+        'add_custom_command add_custom_target add_definitions add_dependencies ' +
         'add_executable add_library add_subdirectory add_test aux_source_directory ' +
         'break build_command cmake_minimum_required cmake_policy configure_file ' +
         'create_test_sourcelist define_property else elseif enable_language enable_testing ' +
@@ -25,16 +27,19 @@ hljs.LANGUAGES['cmake'] = function(hljs) {
         'source_group string target_link_libraries try_compile try_run unset variable_watch ' +
         'while build_name exec_program export_library_dependencies install_files ' +
         'install_programs install_targets link_libraries make_directory remove subdir_depends ' +
-        'subdirs use_mangled_mesa utility_source variable_requires write_file',
-      contains: [
-        {
-          className: 'envvar',
-          begin: '\\${', end: '}'
-        },
-        hljs.HASH_COMMENT_MODE,
-        hljs.QUOTE_STRING_MODE,
-        hljs.NUMBER_MODE
-      ]
-    }
+        'subdirs use_mangled_mesa utility_source variable_requires write_file ' +
+        'qt5_use_modules qt5_use_package qt5_wrap_cpp on off true false and or',
+      operator:
+        'equal less greater strless strgreater strequal matches'
+    },
+    contains: [
+      {
+        className: 'envvar',
+        begin: '\\${', end: '}'
+      },
+      hljs.HASH_COMMENT_MODE,
+      hljs.QUOTE_STRING_MODE,
+      hljs.NUMBER_MODE
+    ]
   };
-}(hljs);
+}
