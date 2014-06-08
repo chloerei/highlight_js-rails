@@ -3,7 +3,7 @@ Language: JSON
 Author: Ivan Sagalaev <maniac@softwaremaniacs.org>
 */
 
-hljs.LANGUAGES['json'] = function(hljs) {
+function(hljs) {
   var LITERALS = {literal: 'true false null'};
   var TYPES = [
     hljs.QUOTE_STRING_MODE,
@@ -35,10 +35,8 @@ hljs.LANGUAGES['json'] = function(hljs) {
   };
   TYPES.splice(TYPES.length, 0, OBJECT, ARRAY);
   return {
-    defaultMode: {
-      contains: TYPES,
-      keywords: LITERALS,
-      illegal: '\\S'
-    }
+    contains: TYPES,
+    keywords: LITERALS,
+    illegal: '\\S'
   };
-}(hljs);
+}
